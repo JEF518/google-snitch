@@ -1,0 +1,15 @@
+version: '3.5'
+
+services:
+  node:
+    container_name: google-snitch
+    build:
+      context: .
+      target: base
+    env_file: ./env/.env
+    ports:
+      - '8010:80'
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    command: ['npm', 'start']

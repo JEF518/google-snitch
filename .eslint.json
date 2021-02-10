@@ -1,0 +1,22 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "extends": "@sky-uk/eslint-config-sky",
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js"]
+      }
+    }
+  },
+  "rules": {
+    "strict": "error",
+    "jest/no-focused-tests": "error",
+    "camelcase": "error"
+  },
+  "plugins": ["jest", "json", "filenames"]
+}
